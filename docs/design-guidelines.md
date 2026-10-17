@@ -30,3 +30,9 @@ All 10 files from `website photos` are optimized into `dist/assets/gallery` and 
 `docs/menu-data.json` records 129 menu lines across 17 original categories from all 10 local menu images (8 unique pages). Site displays 128 legible named lines across 9 browsing groups; one unreadable regional name is withheld rather than guessed. Owner clarified adjacent readable names but did not identify that unclear line. Four transcription notes remain recorded for future owner review. Full menu includes six thalis with contents, regional bhajis, breakfast, sandwiches, soups/starters, Chinese/sizzlers, pizza/pasta, breads/rice/dal, drinks and Jain items. Search matches both English and Marathi, print includes all categories. No prices or priced source images are published.
 
 Motion: staggered hero entrance, observer-based section/photo reveals, slow Marathi welcome ticker with pause button, photo hover zoom, lightweight scroll progress. Reduced motion disables decorative motion and automatic hero playback. Content remains visible if observer support is missing.
+
+## Readability correction
+
+The owner rejected the previous fonts and line spacing. The palette remains; typography changes to Lora 500/600 for English headings and Mukta 400/500/600 for English and Marathi reading/UI text. Locally served WOFF2 font files have verified Marathi and Latin glyph coverage. `dist/typography.css` is the sole screen type authority; 370 competing type declarations were removed from the layout stylesheet. No negative tracking on Devanagari.
+
+Body: 18px desktop, 17px mobile, 1.75–1.8 leading, prose max60ch. English headings: 1.18–1.2 leading. Marathi headings: 1.35–1.4. Menu names: 19–20px Mukta500, Marathi17px below; descriptions16px/1.75. Labels/notes13–16px. Shortened brand tagline avoids narrow-screen overflow. Print rules keep separate compact metrics.

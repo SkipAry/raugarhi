@@ -1,6 +1,6 @@
 # Rau Garhi
 
-Marathi-led heritage restaurant website in `dist`, using the owner-selected Neyam maroon/parchment palette with Cormorant Garamond, Google Sans and Noto Serif Devanagari served locally. Buildless HTML, CSS and JavaScript.
+Marathi-led heritage restaurant website in `dist`, using the owner-selected Neyam maroon/parchment palette. Lora headings and Mukta English/Marathi text are served locally as WOFF2. Buildless HTML, CSS and JavaScript.
 
 ## Preview
 
@@ -23,3 +23,5 @@ Motion: hero text entrance, scroll reveals, a pausable Marathi welcome ticker, p
 ## Hosting
 
 Deploy `dist` as a static directory. `.openai/hosting.json` retains the existing private Sites identity. Source asset folders remain local and ignored; optimized website assets are tracked.
+
+Typography lives in `dist/typography.css`: 17–18px body, 1.75–1.8 paragraph leading, 1.18–1.2 English heading leading, 1.35–1.4 Marathi heading leading, stacked bilingual menu labels. Previous conflicting screen typography declarations were removed from the layout stylesheet. Print metrics remain separate.
