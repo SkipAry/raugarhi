@@ -33,9 +33,27 @@ const localDate = () => {
   const now = new Date();
   return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
 };
-dateField.min = localDate();
+const timeField = form.elements.time;
+function updateBookingLimits() {
+  const now = new Date();
+  dateField.min = localDate();
+  timeField.min = dateField.value === localDate()
+    ? `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}` : '';
+}
+[dateField, timeField].forEach(field => {
+  field.addEventListener('input', () => { timeField.setCustomValidity(''); updateBookingLimits(); });
+  field.addEventListener('focus', updateBookingLimits);
+});
+updateBookingLimits();
 form.addEventListener('submit', event => {
-  event.preventDefault(); dateField.min = localDate();
+  event.preventDefault(); updateBookingLimits();
+  timeField.setCustomValidity('');
+  if (dateField.value && timeField.value) {
+    const requestedTime = new Date(`${dateField.value}T${timeField.value}`);
+    if (requestedTime.getTime() <= Date.now()) {
+      timeField.setCustomValidity('Please choose a date and time in the future.');
+    }
+  }
   if (!form.reportValidity()) return;
   const data = new FormData(form);
   const name = String(data.get('name')).trim();
@@ -48,6 +66,8 @@ form.addEventListener('submit', event => {
   document.querySelector('#form-status').textContent = 'Your WhatsApp request is ready. Tap send in WhatsApp; our team will reply to confirm availability.';
 });
 form.elements.name.addEventListener('input', () => form.elements.name.setCustomValidity(''));
+// Only enable submission once the WhatsApp handler is attached.
+form.querySelector('button[type="submit"]').disabled = false;
 const video = document.querySelector('#hero-video');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 async function startFilm() {
