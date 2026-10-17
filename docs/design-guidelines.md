@@ -62,3 +62,11 @@ Owner removed the standalone section04, THE DETAILS WE COME BACK TO, because its
 History now immediately follows the hero, before the menu ticker. Chapters run history 01, welcome 02, kitchen 03, reservations 04 and visit 05. Album tiles show photos without the bilingual text underneath; image alt text and full-size viewer labels remain.
 
 Updated page order: hero, moving Marathi menu strip, history, welcome, kitchen. Strip keeps its 20-second loop.
+
+## Storytelling and hero gap correction — 18 October 2026
+
+Reference lock: retain the owner-selected Neyam-derived maroon/parchment palette, Google Sans and supplied hero film; use the owner screenshot as the spacing defect reference. Refero live research remains unavailable (inactive subscription); bundled Copywriting and Motion guides inform concise connected prose, progressive chapter reveals and restrained motion. No new art direction or replacement imagery.
+
+Story arc: invitation → first taste (strip) → Maratha inspiration and founders → enter the gates → pangat/menu → wander the Gadhi → memories → reservation → road/map. All owner-selected Marathi lines and core facts stay; short section transitions replace isolated marketing statements. General Maratha-fort context is grounded in [UNESCO](https://whc.unesco.org/en/list/1739/); Rau Garhi remains explicitly a newly built, inspired Gadhi, with three years of work and the owner's July 2026 opening. No royal visits, battles or historic ownership are attributed to the restaurant.
+
+Hero: moved closing tagline inside `.hero-copy` in normal flow, 24px mobile/28px desktop from subtitle. Removed the old 760/780px floor and obsolete control-area padding; minimum remains 100svh for a full-screen film. Mobile section padding56px; history image400px maximum; sticky history photograph on desktop supports reading without scroll hijacking. Overlay remains30%; hero action buttons and controls stay removed.

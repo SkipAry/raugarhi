@@ -28,8 +28,10 @@ Typography lives in `dist/typography.css`: 17–18px body, 1.75–1.8 paragraph 
 
 ## GitHub Pages
 
-Repository: https://github.com/SkipAry/raughari
+Repository: https://github.com/SkipAry/raugarhi
 
-The Pages workflow in `.github/workflows/pages.yml` publishes `dist` on pushes to `main`. All site assets use relative paths for the `/raughari/` project URL. Mobile audit findings and validation: `docs/mobile-audit.md`.
+The Pages workflow in `.github/workflows/pages.yml` publishes `dist` on pushes to `main`. All site assets use relative paths for the `/raugarhi/` project URL. Mobile audit findings and validation: `docs/mobile-audit.md`.
 
 The visit section embeds the exact Rau Garhi Google Maps listing from the owner-provided link (CID 11940498300768388228), with a mobile-friendly frame and external directions link.
+
+The visitor story flows from Maratha heritage and the founders’ dream through the gates, to the pangat, a walk around the Gadhi, shared memories and a visit. The hero tagline follows its subtitle in normal document flow to avoid a viewport-sized internal gap.
