@@ -19,7 +19,7 @@ document.addEventListener('keydown', event => {
     nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus();
   }
 });
-// Keep the fixed enquiry link clear of the hero's film controls.
+// Keep the hero uncluttered; show the fixed enquiry link below it.
 const floatingContact = document.querySelector('.floating-contact');
 if ('IntersectionObserver' in window) {
   floatingContact.hidden = true;
@@ -49,27 +49,18 @@ form.addEventListener('submit', event => {
 });
 form.elements.name.addEventListener('input', () => form.elements.name.setCustomValidity(''));
 const video = document.querySelector('#hero-video');
-const filmControl = document.querySelector('.film-control');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let playbackWanted = !reducedMotion.matches;
-function updateFilmControl() {
-  const paused = video.paused;
-  filmControl.querySelector('.play-icon').textContent = paused ? '▶' : 'Ⅱ';
-  filmControl.querySelector('.film-label').textContent = paused ? 'Play film' : 'Pause film';
-  filmControl.setAttribute('aria-label', paused ? 'Play the hero video' : 'Pause the hero video');
+async function startFilm() {
+  try { await video.play(); } catch { /* Keep the poster visible when autoplay is unavailable. */ }
 }
-async function startFilm() { try { await video.play(); } catch { /* Poster and play control remain available when autoplay is blocked. */ } updateFilmControl(); }
-video.addEventListener('play', updateFilmControl);
-video.addEventListener('pause', updateFilmControl);
-filmControl.addEventListener('click', () => {
-  if (video.paused) { playbackWanted = true; startFilm(); }
-  else { playbackWanted = false; video.pause(); }
+reducedMotion.addEventListener('change', event => {
+  if (event.matches) video.pause(); else if (!document.hidden) startFilm();
 });
-reducedMotion.addEventListener('change', event => { playbackWanted = !event.matches; if (event.matches) video.pause(); else startFilm(); });
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) video.pause(); else if (playbackWanted && !document.querySelector('#film-dialog')?.open) startFilm();
+  if (document.hidden) video.pause(); else if (!reducedMotion.matches) startFilm();
 });
-if (playbackWanted) { video.muted = true; startFilm(); } else updateFilmControl();
+if (!reducedMotion.matches) { video.muted = true; startFilm(); }
+
 document.querySelector('#year').textContent = new Date().getFullYear();
 const menuTabs = [...document.querySelectorAll('[role="tab"]')];
 function selectMenuTab(tab, moveFocus = false) {
@@ -141,22 +132,6 @@ photoDialog.addEventListener('keydown', event => {
   }
 });
 photoDialog.addEventListener('click', event => {if(event.target === photoDialog) {const rect=photoDialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)photoDialog.close();}});
-// The hero fills the viewport; the viewer preserves the full original portrait frame.
-const fullFilmDialog = document.querySelector('#film-dialog');
-const fullFilm = fullFilmDialog.querySelector('video');
-let heroWasPlaying = false;
-document.querySelector('.full-film-button').addEventListener('click', () => {
-  heroWasPlaying = !video.paused;
-  video.pause();
-  fullFilmDialog.showModal();
-  const play = fullFilm.play();
-  if (play?.catch) play.catch(() => {});
-});
-fullFilmDialog.querySelector('.film-close').addEventListener('click', () => fullFilmDialog.close());
-fullFilmDialog.addEventListener('close', () => {
-  fullFilm.pause();
-  if (heroWasPlaying && playbackWanted && !document.hidden) startFilm();
-});
 // Progressive motion: content stays visible when observers are unavailable.
 if ('IntersectionObserver' in window && !reducedMotion.matches) {
   const revealTargets = document.querySelectorAll('.photo-card,.welcome-copy,.section-intro,.history-heading,.history-image,.history-chapter,.wada-copy,.album-heading,.reservation-copy,#reservation-form,.visit-heading,.visit-links');

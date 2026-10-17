@@ -8,7 +8,7 @@ Run `python -m http.server 4173 --directory dist` and open http://localhost:4173
 
 ## Content
 
-Full-screen owner-supplied hero video, with pause/play and a full-film viewer preserving its portrait frame. All 10 files from `website photos` appear in the gallery; `docs/photo-manifest.json` maps originals to optimized deployed assets. Gallery supports full-size viewing and keyboard navigation.
+Full-screen owner-supplied hero video, with a clean, control-free hero and reduced-motion poster fallback. All 10 files from `website photos` appear in the gallery; `docs/photo-manifest.json` maps originals to optimized deployed assets. Gallery supports full-size viewing and keyboard navigation.
 
 All 10 local menu images were inspected (8 unique pages). `docs/menu-data.json` records 129 original menu lines across 17 categories. Website includes 128 legible named entries across 9 browsing groups, English/Marathi search, six thali descriptions and printing. One unreadable regional line remains withheld pending its correct name. No prices or priced menu images appear on the website.
 
@@ -31,3 +31,5 @@ Typography lives in `dist/typography.css`: 17–18px body, 1.75–1.8 paragraph 
 Repository: https://github.com/SkipAry/raughari
 
 The Pages workflow in `.github/workflows/pages.yml` publishes `dist` on pushes to `main`. All site assets use relative paths for the `/raughari/` project URL. Mobile audit findings and validation: `docs/mobile-audit.md`.
+
+The visit section embeds the exact Rau Garhi Google Maps listing from the owner-provided link (CID 11940498300768388228), with a mobile-friendly frame and external directions link.
