@@ -1,19 +1,13 @@
 # Rau Garhi
 
-A responsive heritage restaurant website, inspired by the supplied Neyam reference. Buildless HTML, CSS and JavaScript. Prepared site files are in `dist`.
+Responsive heritage restaurant website, using the owner-selected Neyam palette and typography. Buildless HTML/CSS/JavaScript in `dist`.
 
-## Preview
+Run `python -m http.server 4173 --directory dist` and visit http://localhost:4173.
 
-Run `python -m http.server 4173 --directory dist` from this directory, then open http://localhost:4173.
+The hero uses the owner's actual video. Muted looping playback is attempted on load; reduced-motion visitors see a still and can play manually. Browsers can block autoplay. Local font files include Google Sans, Cormorant Garamond and Noto Serif Devanagari.
 
-## Contact
+The Jain menu contains 25 transcribed dishes from the owner's Google Maps photo, with no prices. Use category tabs or print all categories. History and founders are based on the owner's supplied story. Sources and design decisions: `docs/design-guidelines.md`.
 
-WhatsApp enquiries and reservation requests use the owner-provided number +91 92723 03682. The form opens a prefilled WhatsApp message; the visitor must send it. A request is not a confirmed booking until the restaurant replies. No customer information is stored by this website.
+Reservations and enquiries open WhatsApp +91 92723 03682 with a prepared message. Visitors send it themselves; bookings require the restaurant's reply. The website stores no customer information.
 
-## Content
-
-Images and video come from the supplied project assets. No menu dishes, opening hours, historical dates or street address have been invented. Google Maps and Instagram link to the owner's supplied URLs. Replace the menu enquiry with confirmed menu content when available. No prices are shown.
-
-## Deployment
-
-Deploy `dist` as a static directory. No build or server runtime required.
+Deploy `dist` as a static directory. `.openai/hosting.json` retains the existing private Sites identity.
