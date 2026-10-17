@@ -60,3 +60,5 @@ Latest owner adjustment: hero dark overlay is30%, superseding the earlier10% set
 Owner removed the standalone section04, THE DETAILS WE COME BACK TO, because its architecture copy repeats the history and gallery. All10 gallery images remain. Reservation and location chapter numbers now04 and05. The earlier light-brown colour request remains paused; no footer recolouring applied.
 
 History now immediately follows the hero, before the menu ticker. Chapters run history 01, welcome 02, kitchen 03, reservations 04 and visit 05. Album tiles show photos without the bilingual text underneath; image alt text and full-size viewer labels remain.
+
+Updated page order: hero, moving Marathi menu strip, history, welcome, kitchen. Strip keeps its 20-second loop.
