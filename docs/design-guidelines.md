@@ -48,3 +48,9 @@ Owner requested words evocative of the Peshwa era. Hero: थाट पेशव�
 ## Menu ticker and brighter hero
 
 Moving strip now lists eight confirmed Marathi menu items in two identical groups for a seamless 20-second loop on desktop and mobile. Existing pause control and reduced-motion support remain. Hero video remains fully opaque; the dark overlay is now a uniform10% at the owner’s request to brighten the film.
+
+## Consistent section placement
+
+Owner reported mismatched text placement across sections. Replaced the accumulated layout stylesheet with one canonical `dist/style.css`, retaining `dist/typography.css` for fonts, type metrics and text colour only. All sections, navigation and footer share `--page-inset` and a 1200px maximum content width. Section leads stack label → heading → paragraph on one left edge. English heading and album paragraph hard breaks removed. Welcome note now follows its text, history introduction sits above its paired image/story, numbered subchapters align with body copy, reservation form top-aligns with copy. Two-column editorial areas stack at900px, navigation collapses at1100px, mobile uses24px/20px gutters. Hero actions and film controls now each have explicit flex groups.
+
+Eight-item Marathi menu ticker keeps its seamless20-second loop. Hero dark overlay stays at10%; video stays fully opaque. Browser page DOM was read successfully; screenshot and measurement commands still time out, so rendered alignment remains unverified. Source, structure and retained-content checks performed.
