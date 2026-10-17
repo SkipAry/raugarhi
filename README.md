@@ -1,13 +1,25 @@
 # Rau Garhi
 
-Responsive heritage restaurant website, using the owner-selected Neyam palette and typography. Buildless HTML/CSS/JavaScript in `dist`.
+Marathi-led heritage restaurant website in `dist`, using the owner-selected Neyam maroon/parchment palette with Cormorant Garamond, Google Sans and Noto Serif Devanagari served locally. Buildless HTML, CSS and JavaScript.
 
-Run `python -m http.server 4173 --directory dist` and visit http://localhost:4173.
+## Preview
 
-The hero uses the owner's actual video. Muted looping playback is attempted on load; reduced-motion visitors see a still and can play manually. Browsers can block autoplay. Local font files include Google Sans, Cormorant Garamond and Noto Serif Devanagari.
+Run `python -m http.server 4173 --directory dist` and open http://localhost:4173.
 
-The Jain menu contains 25 transcribed dishes from the owner's Google Maps photo, with no prices. Use category tabs or print all categories. History and founders are based on the owner's supplied story. Sources and design decisions: `docs/design-guidelines.md`.
+## Content
 
-Reservations and enquiries open WhatsApp +91 92723 03682 with a prepared message. Visitors send it themselves; bookings require the restaurant's reply. The website stores no customer information.
+Full-screen owner-supplied hero video, with pause/play and a full-film viewer preserving its portrait frame. All 10 files from `website photos` appear in the gallery; `docs/photo-manifest.json` maps originals to optimized deployed assets. Gallery supports full-size viewing and keyboard navigation.
 
-Deploy `dist` as a static directory. `.openai/hosting.json` retains the existing private Sites identity.
+All 10 local menu images were inspected (8 unique pages). `docs/menu-data.json` records 129 original menu lines across 17 categories. Website includes 128 legible named entries across 9 browsing groups, English/Marathi search, six thali descriptions and printing. One unreadable regional line remains withheld pending its correct name. No prices or priced menu images appear on the website.
+
+History follows the owner's supplied founder story, three-year build and July 2026 opening in Sarola. Detailed sources and design decisions: `docs/design-guidelines.md`.
+
+## Interactions
+
+WhatsApp enquiries and reservations use the owner-confirmed +91 92723 03682. Visitors send a prepared message themselves; bookings require the team's reply. No customer data is stored by the website.
+
+Motion: hero text entrance, scroll reveals, a pausable Marathi welcome ticker, photo hover movement and scroll progress. Reduced-motion preferences respected, and content remains visible when observers are unavailable.
+
+## Hosting
+
+Deploy `dist` as a static directory. `.openai/hosting.json` retains the existing private Sites identity. Source asset folders remain local and ignored; optimized website assets are tracked.

@@ -20,3 +20,13 @@ Location: https://maps.app.goo.gl/3p2wWa9QgBCq72FS7 owner-provided actual venue 
 WhatsApp: +91 92723 03682, owner-confirmed. Reservations are requests until the team replies. Hours remain unverified, so route hours enquiries to team.
 
 Live Refero unavailable due inactive subscription. Owner reference and bundled typography/craft/motion references used. Browser visual QA attempted; Chrome navigation connection times out. Static and functional validation performed separately; do not claim screenshot verification without rendered evidence.
+
+## Marathi-led full-video revision
+
+Owner requested full-screen hero video, Marathi character, all local photos and complete local menu. Hero now fills the viewport; typography uses Marathi first (गढी मराठमोळी. पंगत आपुलकीची.). A full-film dialog preserves the uncropped portrait original. Transparent header overlays the film.
+
+All 10 files from `website photos` are optimized into `dist/assets/gallery` and appear in the visible gallery. `docs/photo-manifest.json` maps every original to its deployed asset. Source folders stay local and are ignored by Git; optimized assets are tracked. Gallery supports full-size viewing, previous/next, keyboard arrows and Escape.
+
+`docs/menu-data.json` records 129 menu lines across 17 original categories from all 10 local menu images (8 unique pages). Site displays 128 legible named lines across 9 browsing groups; one unreadable regional name is withheld rather than guessed. Owner clarified adjacent readable names but did not identify that unclear line. Four transcription notes remain recorded for future owner review. Full menu includes six thalis with contents, regional bhajis, breakfast, sandwiches, soups/starters, Chinese/sizzlers, pizza/pasta, breads/rice/dal, drinks and Jain items. Search matches both English and Marathi, print includes all categories. No prices or priced source images are published.
+
+Motion: staggered hero entrance, observer-based section/photo reveals, slow Marathi welcome ticker with pause button, photo hover zoom, lightweight scroll progress. Reduced motion disables decorative motion and automatic hero playback. Content remains visible if observer support is missing.

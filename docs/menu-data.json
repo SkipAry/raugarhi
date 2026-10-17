@@ -1,0 +1,703 @@
+{
+  "title": "Rau Garhi owner-supplied menu transcription",
+  "transcribedOn": "2026-10-18",
+  "sourceDirectory": "menu",
+  "notes": [
+    "All ten supplied image files visually inspected. Eight unique pages; two duplicate images.",
+    "No prices transcribed. Slash-separated variants retained as printed; not silently expanded.",
+    "English names transliterated or translated from readable Marathi; English printed on original preferred.",
+    "Regional spelling uncertainties recorded separately. Do not publish uncertain names without review."
+  ],
+  "duplicateSources": {
+    "unnamed-extractpics.jpg": "1000376434.jpg",
+    "unnamed-extractpics.png": "1000376437.jpg"
+  },
+  "categories": [
+    {
+      "id": "south-indian",
+      "name": "South Indian Breakfast",
+      "marathi": "साउथ इंडियन ब्रेकफास्ट",
+      "source": "1000376434.jpg",
+      "items": [
+        {
+          "name": "Idli Sambar",
+          "marathi": "इडली सांबर"
+        },
+        {
+          "name": "Masala Dosa",
+          "marathi": "मसाला डोसा"
+        },
+        {
+          "name": "Plain Dosa",
+          "marathi": "प्लेन डोसा"
+        },
+        {
+          "name": "Onion Uttapam",
+          "marathi": "ऑनियन उत्तप्पा"
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sandwiches",
+      "marathi": "सँडविचेस",
+      "source": "1000376434.jpg",
+      "items": [
+        {
+          "name": "Bread Butter / Jam",
+          "marathi": "ब्रेड बटर / जाम"
+        },
+        {
+          "name": "Toast Butter / Jam",
+          "marathi": "टोस्ट बटर / जाम"
+        },
+        {
+          "name": "Veg Sandwich",
+          "marathi": "व्हेज सँडविच"
+        },
+        {
+          "name": "Veg Cheese Grilled Sandwich",
+          "marathi": "व्हेज चीज ग्रील सँडविच"
+        },
+        {
+          "name": "Rau Special Sandwich",
+          "marathi": "राऊ स्पेशल सँडविच"
+        }
+      ]
+    },
+    {
+      "id": "hot-beverages",
+      "name": "Hot Beverages",
+      "marathi": "गरमा गरम पेय",
+      "source": "1000376434.jpg",
+      "items": [
+        {
+          "name": "Tea",
+          "marathi": "चहा"
+        },
+        {
+          "name": "Tea without Sugar",
+          "marathi": "विनासाखर चहा"
+        },
+        {
+          "name": "Black Tea",
+          "marathi": "काळा चहा"
+        },
+        {
+          "name": "Lemon Tea",
+          "marathi": "लेमन चहा"
+        },
+        {
+          "name": "Green Tea",
+          "marathi": "ग्रीन चहा"
+        },
+        {
+          "name": "Coffee",
+          "marathi": "कॉफी"
+        }
+      ]
+    },
+    {
+      "id": "cold-beverages",
+      "name": "Cold Beverages & Milk",
+      "marathi": "शीतपेय",
+      "source": "1000376434.jpg",
+      "items": [
+        {
+          "name": "Plain Buttermilk",
+          "marathi": "प्लेन ताक"
+        },
+        {
+          "name": "Masala Buttermilk",
+          "marathi": "मसाला ताक"
+        },
+        {
+          "name": "Solkadhi",
+          "marathi": "सोलकढी"
+        },
+        {
+          "name": "Lassi",
+          "marathi": "लस्सी"
+        },
+        {
+          "name": "Fresh Lime Soda",
+          "marathi": "फ्रेश लाईम सोडा"
+        },
+        {
+          "name": "Limbu Pani",
+          "marathi": "लिंबू पाणी"
+        },
+        {
+          "name": "Hot Milk",
+          "marathi": "गरम दूध"
+        }
+      ]
+    },
+    {
+      "id": "thalis",
+      "name": "Rau Special Thalis",
+      "marathi": "राऊ स्पेशल थाळी",
+      "source": "1000376437.jpg",
+      "items": [
+        {
+          "name": "Rau Special Thali",
+          "marathi": "राऊ स्पेशल थाळी",
+          "description": "Stuffed brinjal, akkha masoor, dry vegetable preparation, masala bhaat, kadhi, koshimbir, papad, 2 chapatis or 2 bhakris, shevayanchi kheer."
+        },
+        {
+          "name": "Pithla Bhakri Thali",
+          "marathi": "पिठलं भाकरी थाळी",
+          "description": "Pithla, kadhi, papad, Indrayani rice, 2 bhakris."
+        },
+        {
+          "name": "Ghut Bhakri Thali",
+          "marathi": "घुटं भाकरी थाळी",
+          "description": "Udid ghut, kadhi, papad, Indrayani rice, 2 bhakris."
+        },
+        {
+          "name": "Puran Poli Thali",
+          "marathi": "पुरणपोळी थाळी",
+          "description": "2 puran polis, katachi amti, alani amti, milk, kurdai, potato bhaji, papad, Indrayani rice."
+        },
+        {
+          "name": "Aamras Thali",
+          "marathi": "आमरस थाळी",
+          "description": "Aamras bowl, katachi amti, potato bhaji, Indrayani rice, papad, 3 chapatis."
+        },
+        {
+          "name": "Rau Special Punjabi Thali",
+          "marathi": "राऊ स्पेशल पंजाबी थाळी",
+          "description": "2 butter rotis, kaju paneer masala, dal tadka, veg Kolhapuri, jeera rice, basundi, buttermilk."
+        }
+      ]
+    },
+    {
+      "id": "jain-breakfast",
+      "name": "Jain Breakfast",
+      "marathi": "जैन मेनू — उपहार",
+      "source": "1000376440.jpg",
+      "items": [
+        {
+          "name": "Misal Pav",
+          "marathi": "मिसळ पाव"
+        },
+        {
+          "name": "Fasting Misal",
+          "marathi": "उपवासाची मिसळ"
+        },
+        {
+          "name": "Thalipeeth",
+          "marathi": "थालीपीठ"
+        },
+        {
+          "name": "Ghavane",
+          "marathi": "घावणे"
+        },
+        {
+          "name": "Idli Chutney",
+          "marathi": "इडली चटणी"
+        },
+        {
+          "name": "Plain Dosa",
+          "marathi": "प्लेन डोसा"
+        }
+      ]
+    },
+    {
+      "id": "jain-meals",
+      "name": "Jain Meals",
+      "marathi": "जैन मेनू — जेवण",
+      "source": "1000376440.jpg",
+      "items": [
+        {
+          "name": "Pithla",
+          "marathi": "पिठलं"
+        },
+        {
+          "name": "Methi Pithla",
+          "marathi": "मेथी पिठलं"
+        },
+        {
+          "name": "Matki Usal",
+          "marathi": "मटकीची उसळ"
+        },
+        {
+          "name": "Akkha Masoor",
+          "marathi": "अख्खा मसूर"
+        },
+        {
+          "name": "Shev Bhaji",
+          "marathi": "शेव भाजी"
+        },
+        {
+          "name": "Paneer Butter Masala",
+          "marathi": "पनीर बटर मसाला"
+        },
+        {
+          "name": "Kaju Maratha",
+          "marathi": "काजू मराठा"
+        },
+        {
+          "name": "Palak Paneer",
+          "marathi": "पालक पनीर"
+        },
+        {
+          "name": "Hakka Noodles",
+          "marathi": "हक्का नूडल्स"
+        },
+        {
+          "name": "Plain Rice",
+          "marathi": "प्लेन राईस"
+        },
+        {
+          "name": "Jeera Rice",
+          "marathi": "जीरा राईस"
+        },
+        {
+          "name": "Tomato Rice",
+          "marathi": "टोमॅटो राईस"
+        },
+        {
+          "name": "Varan Bhaat",
+          "marathi": "वरण भात"
+        },
+        {
+          "name": "Fried Rice",
+          "marathi": "फ्राईड राईस"
+        },
+        {
+          "name": "Puran Poli",
+          "marathi": "पुरण पोळी"
+        },
+        {
+          "name": "Khawa Poli",
+          "marathi": "खवा पोळी"
+        },
+        {
+          "name": "Modak",
+          "marathi": "मोदक"
+        },
+        {
+          "name": "Shevayanchi Kheer",
+          "marathi": "शेवयांची खीर"
+        },
+        {
+          "name": "Shrikhand / Basundi Puri",
+          "marathi": "श्रीखंड / बासुंदी पुरी"
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "marathi": "पिझ्झा",
+      "source": "1000376443.jpg",
+      "items": [
+        {
+          "name": "Farmer Pizza",
+          "marathi": "फार्मर पिझ्झा"
+        },
+        {
+          "name": "Margherita Pizza",
+          "marathi": "मार्गरीटा पिझ्झा"
+        },
+        {
+          "name": "Paneer Tikka Pizza",
+          "marathi": "पनीर टिक्का पिझ्झा"
+        }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "marathi": "पास्ता",
+      "source": "1000376443.jpg",
+      "items": [
+        {
+          "name": "Alfredo Pasta",
+          "marathi": "अल्फ्रेडो पास्ता"
+        },
+        {
+          "name": "Arrabbiata Pasta",
+          "marathi": "अरेबीता पास्ता"
+        },
+        {
+          "name": "Pink Sauce Pasta",
+          "marathi": "पिंक सॉस पास्ता"
+        }
+      ]
+    },
+    {
+      "id": "breads",
+      "name": "Breads & Bhakri",
+      "marathi": "रोटीचे प्रकार",
+      "source": "1000376443.jpg",
+      "items": [
+        {
+          "name": "Roti",
+          "marathi": "रोटी"
+        },
+        {
+          "name": "Butter Roti",
+          "marathi": "बटर रोटी"
+        },
+        {
+          "name": "Butter Naan",
+          "marathi": "बटर नान"
+        },
+        {
+          "name": "Naan",
+          "marathi": "नान"
+        },
+        {
+          "name": "Kulcha",
+          "marathi": "कुल्चा"
+        },
+        {
+          "name": "Garlic Naan / Cheese",
+          "marathi": "गार्लिक नान / चीज"
+        },
+        {
+          "name": "Lachha Paratha",
+          "marathi": "लच्छा पराठा"
+        },
+        {
+          "name": "Chapati",
+          "marathi": "चपाती"
+        },
+        {
+          "name": "Butter Chapati",
+          "marathi": "बटर चपाती"
+        },
+        {
+          "name": "Bajra Bhakri",
+          "marathi": "बाजरी भाकरी"
+        },
+        {
+          "name": "Jowar Bhakri",
+          "marathi": "ज्वारीची भाकरी"
+        },
+        {
+          "name": "Nachni Bhakri",
+          "marathi": "नाचणी भाकरी"
+        },
+        {
+          "name": "Rice Bhakri",
+          "marathi": "तांदळाची भाकरी"
+        }
+      ]
+    },
+    {
+      "id": "regional-vegetables",
+      "name": "Regional Maharashtrian Bhajis",
+      "marathi": "आवडीनुसार गावरान देशी भाज्या",
+      "source": "1000376446.jpg",
+      "items": [
+        {
+          "name": "Bharla Masala Vanga",
+          "marathi": "भरलं मसाला वांगं"
+        },
+        {
+          "name": "Bharla Rassa Vanga",
+          "marathi": "भरलं रस्सा वांगं"
+        },
+        {
+          "name": "Bharit Vanga (Khandeshi)",
+          "marathi": "भरताचे वांगं (खान्देशी)",
+          "requiresOwnerReview": true
+        },
+        {
+          "name": "Akkha Masoor",
+          "marathi": "अख्खा मसूर"
+        },
+        {
+          "name": "Shev Bhaji (Saoji)",
+          "marathi": "शेव भाजी (सावजी)"
+        },
+        {
+          "name": "Udid Dal Ghut",
+          "marathi": "उडीद डाळीचे घुटं"
+        },
+        {
+          "name": "Satari Sandga",
+          "marathi": "सातारी सांडगा"
+        },
+        {
+          "name": "Pithla",
+          "marathi": "पिठलं"
+        },
+        {
+          "name": "Methi Pithla",
+          "marathi": "मेथी पिठलं"
+        },
+        {
+          "name": "Dry Potato Bhaji",
+          "marathi": "बटाट्याची सुकी भाजी"
+        },
+        {
+          "name": "Black Peas Rassa (Konkani)",
+          "marathi": "काळा वाटाणा रस्सा भाजी (कोकणी)"
+        },
+        {
+          "name": "Jackfruit Bhaji (Konkani)",
+          "marathi": "फणस भाजी (कोकणी)"
+        },
+        {
+          "name": "Jackfruit Bhaji (Saoji)",
+          "marathi": "फणस भाजी (सावजी)"
+        },
+        {
+          "name": "Vaal Rassa Bhaji (Konkani)",
+          "marathi": "वाल भाजी रस्सा (कोकणी)"
+        },
+        {
+          "name": "Katachi Amti",
+          "marathi": "कटाची आमटी"
+        },
+        {
+          "name": "Aluche Phadphade",
+          "marathi": "आळूचे फदफदे"
+        },
+        {
+          "name": "Homestyle Varan with Tempering",
+          "marathi": "घरगुती वरण फोडणी",
+          "requiresOwnerReview": true
+        },
+        {
+          "name": null,
+          "marathi": "शेंगवण्याचे चुटचुटे (सुधा)",
+          "requiresOwnerReview": true
+        },
+        {
+          "name": "Matki Usal",
+          "marathi": "मटकीची उसळ"
+        },
+        {
+          "name": "Patodi Rassa Bhaji",
+          "marathi": "पाटोडी रस्सा भाजी"
+        },
+        {
+          "name": "Shevga Handi",
+          "marathi": "शेवगा हंडी"
+        }
+      ]
+    },
+    {
+      "id": "chinese",
+      "name": "Chinese Main Course",
+      "marathi": "चायनीज मेन कोर्स",
+      "source": "1000376452.jpg",
+      "items": [
+        {
+          "name": "Veg Hakka Noodles / Schezwan",
+          "marathi": "व्हेज हक्का नूडल्स / शेजवाण"
+        },
+        {
+          "name": "Burnt Garlic Noodles",
+          "marathi": "बर्न गार्लिक नूडल्स"
+        },
+        {
+          "name": "Veg Burnt Garlic Rice",
+          "marathi": "व्हेज बर्न राईस"
+        },
+        {
+          "name": "Veg Fried Rice",
+          "marathi": "व्हेज फ्राईड राईस"
+        },
+        {
+          "name": "Triple Schezwan Rice / Noodles",
+          "marathi": "ट्रिपल शेजवाण राईस / नूडल्स"
+        },
+        {
+          "name": "Paneer Manchurian Gravy",
+          "marathi": "पनीर मंच्युरिन ग्रेव्ही"
+        },
+        {
+          "name": "Veg Manchurian Gravy",
+          "marathi": "व्हेज मंच्युरिन ग्रेव्ही"
+        }
+      ]
+    },
+    {
+      "id": "sizzlers",
+      "name": "Sizzlers",
+      "marathi": "सीजलर",
+      "source": "1000376452.jpg",
+      "items": [
+        {
+          "name": "Rau Special Sizzler",
+          "marathi": "राऊ स्पेशल सीजलर"
+        },
+        {
+          "name": "Slow Boat of China",
+          "marathi": "स्लो बोट ऑफ चायना"
+        }
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "marathi": "भाताचे प्रकार",
+      "source": "1000376455.jpg",
+      "items": [
+        {
+          "name": "Plain Rice",
+          "marathi": "प्लेन राईस"
+        },
+        {
+          "name": "Jeera Rice",
+          "marathi": "जीरा राईस"
+        },
+        {
+          "name": "Indrayani Rice",
+          "marathi": "इंद्रायणी राईस"
+        },
+        {
+          "name": "Masala Bhaat",
+          "marathi": "मसाला भात"
+        },
+        {
+          "name": "Pavta Bhaat",
+          "marathi": "पावटा भात"
+        },
+        {
+          "name": "Tomato Bhaat",
+          "marathi": "टोमॅटो भात"
+        },
+        {
+          "name": "Curd Rice",
+          "marathi": "दही भात"
+        },
+        {
+          "name": "Dal Khichdi",
+          "marathi": "डाळ खिचडी"
+        },
+        {
+          "name": "Varan Bhaat",
+          "marathi": "वरण भात"
+        }
+      ]
+    },
+    {
+      "id": "dal",
+      "name": "Dal",
+      "marathi": "डाळीचे प्रकार",
+      "source": "1000376455.jpg",
+      "items": [
+        {
+          "name": "Dal Fry",
+          "marathi": "डाळ फ्राय"
+        },
+        {
+          "name": "Dal Tadka",
+          "marathi": "डाळ तडका"
+        },
+        {
+          "name": "Varan",
+          "marathi": "वरण"
+        },
+        {
+          "name": "Dal Makhani",
+          "marathi": "डाळ मखनी"
+        }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "Soups",
+      "marathi": "सुप",
+      "source": "1000376458.jpg",
+      "items": [
+        {
+          "name": "Tomato Soup",
+          "marathi": "टोमॅटो सुप"
+        },
+        {
+          "name": "Veg Manchow Soup",
+          "marathi": "व्हेज मंचाव सुप"
+        },
+        {
+          "name": "Shevga Soup",
+          "marathi": "शेवगा सुप"
+        }
+      ]
+    },
+    {
+      "id": "starters",
+      "name": "Starters",
+      "marathi": "स्टार्टर",
+      "source": "1000376458.jpg",
+      "items": [
+        {
+          "name": "Masala Papad",
+          "marathi": "मसाला पापड"
+        },
+        {
+          "name": "Kothimbir Vadi",
+          "marathi": "कोथिंबीर वडी"
+        },
+        {
+          "name": "Alu Vadi",
+          "marathi": "आळू वडी"
+        },
+        {
+          "name": "Lati Vadi",
+          "marathi": "लाटीवडी",
+          "requiresOwnerReview": true
+        },
+        {
+          "name": "Onion Bhaji (When It Rains)",
+          "marathi": "कांदा भजी (पाऊस पडल्यास)"
+        },
+        {
+          "name": "Paneer Angara Kebab",
+          "marathi": "पनीर अंगारा कबाब"
+        },
+        {
+          "name": "Paneer Lasuni Kebab",
+          "marathi": "पनीर लसूणी कबाब"
+        },
+        {
+          "name": "Hara Bhara Kebab",
+          "marathi": "हराभरा कबाब"
+        },
+        {
+          "name": "Paneer Chilli Dry",
+          "marathi": "पनीर चीली ड्राय"
+        },
+        {
+          "name": "Veg Crispy",
+          "marathi": "व्हेज क्रिस्पी"
+        },
+        {
+          "name": "Veg Manchurian Dry",
+          "marathi": "व्हेज मंच्युरीजेन ड्राय"
+        }
+      ]
+    }
+  ],
+  "uncertainText": [
+    {
+      "source": "1000376446.jpg",
+      "item": "Homestyle Varan with Tempering",
+      "note": "First variant before slash resembles आंधळ वरण; retain only clearly readable घरगुती वरण फोडणी in public menu until owner confirms.",
+      "visible": "आंधळ वरण / घरगुती वरण फोडणी"
+    },
+    {
+      "source": "1000376446.jpg",
+      "item": "Shevgyachya Shenga Chutpute",
+      "note": "Whole line regional name difficult to read; provisional transcription only. Exclude this item from public menu pending confirmation.",
+      "visible": "शेंगवण्याचे चुटचुटे (सुधा)"
+    },
+    {
+      "source": "1000376458.jpg",
+      "item": "Lati Vadi",
+      "note": "Readable Marathi लाटीवडी; English is transliteration, regional preparation not independently established."
+    },
+    {
+      "source": "1000376446.jpg",
+      "item": "Bharit Vanga (Khandeshi)",
+      "note": "Marathi appears भरताचे वांगं (खान्देशी); English transliteration approximate; no ingredient description inferred."
+    }
+  ]
+}

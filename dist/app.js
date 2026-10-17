@@ -52,7 +52,7 @@ filmControl.addEventListener('click', () => {
 });
 reducedMotion.addEventListener('change', event => { playbackWanted = !event.matches; if (event.matches) video.pause(); else startFilm(); });
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) video.pause(); else if (playbackWanted) startFilm();
+  if (document.hidden) video.pause(); else if (playbackWanted && !document.querySelector('#film-dialog')?.open) startFilm();
 });
 if (playbackWanted) { video.muted = true; startFilm(); } else updateFilmControl();
 document.querySelector('#year').textContent = new Date().getFullYear();
@@ -74,3 +74,98 @@ menuTabs.forEach((tab, index) => {
   });
 });
 document.querySelector('.print-menu').addEventListener('click', () => window.print());
+// Search the complete bilingual menu, retaining category navigation when cleared.
+const menuSearch = document.querySelector('#menu-search');
+const menuPanels = [...document.querySelectorAll('.menu-panel')];
+const menuTabList = document.querySelector('.menu-tabs');
+const menuResults = document.querySelector('#menu-results');
+const menuEmpty = document.querySelector('#menu-empty');
+menuSearch.addEventListener('input', () => {
+  const query = menuSearch.value.trim().normalize('NFC').toLocaleLowerCase('en-IN');
+  menuTabList.hidden = Boolean(query);
+  let matches = 0;
+  menuPanels.forEach(panel => {
+    let panelMatches = 0;
+    panel.querySelectorAll('.menu-subcategory').forEach(group => {
+      let groupMatches = 0;
+      group.querySelectorAll('.menu-dish').forEach(dish => {
+        const found = !query || dish.textContent.normalize('NFC').toLocaleLowerCase('en-IN').includes(query);
+        dish.hidden = !found;
+        if (found) groupMatches++;
+      });
+      group.hidden = !groupMatches;
+      panelMatches += groupMatches;
+    });
+    panel.hidden = !panelMatches;
+    matches += panelMatches;
+  });
+  menuEmpty.hidden = matches > 0;
+  menuResults.textContent = query ? `${matches} matching selections` : `${matches} menu selections`;
+  if (!query) selectMenuTab(menuTabs.find(tab => tab.getAttribute('aria-selected') === 'true') || menuTabs[0]);
+});
+// Photo album: every supplied image can be inspected at full size.
+const photoCards = [...document.querySelectorAll('[data-gallery-index]')];
+const photoDialog = document.querySelector('#photo-lightbox');
+let currentPhoto = 0;
+function showPhoto(index) {
+  currentPhoto = (index + photoCards.length) % photoCards.length;
+  const card = photoCards[currentPhoto];
+  const image = photoDialog.querySelector('img');
+  image.src = card.dataset.full;
+  image.alt = card.querySelector('img').alt;
+  photoDialog.querySelector('figcaption').textContent = card.dataset.caption;
+  photoDialog.querySelector('.lightbox-count').textContent = `${currentPhoto + 1} / ${photoCards.length}`;
+}
+photoCards.forEach((card,index) => card.addEventListener('click', () => {showPhoto(index);photoDialog.showModal();}));
+photoDialog.querySelector('.lightbox-close').addEventListener('click', () => photoDialog.close());
+photoDialog.querySelector('.lightbox-prev').addEventListener('click', () => showPhoto(currentPhoto - 1));
+photoDialog.querySelector('.lightbox-next').addEventListener('click', () => showPhoto(currentPhoto + 1));
+photoDialog.addEventListener('keydown', event => {
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault(); showPhoto(currentPhoto + (event.key === 'ArrowRight' ? 1 : -1));
+  }
+});
+photoDialog.addEventListener('click', event => {if(event.target === photoDialog) {const rect=photoDialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)photoDialog.close();}});
+// The hero fills the viewport; the viewer preserves the full original portrait frame.
+const fullFilmDialog = document.querySelector('#film-dialog');
+const fullFilm = fullFilmDialog.querySelector('video');
+let heroWasPlaying = false;
+document.querySelector('.full-film-button').addEventListener('click', () => {
+  heroWasPlaying = !video.paused;
+  video.pause();
+  fullFilmDialog.showModal();
+  const play = fullFilm.play();
+  if (play?.catch) play.catch(() => {});
+});
+fullFilmDialog.querySelector('.film-close').addEventListener('click', () => fullFilmDialog.close());
+fullFilmDialog.addEventListener('close', () => {
+  fullFilm.pause();
+  if (heroWasPlaying && playbackWanted && !document.hidden) startFilm();
+});
+const ticker = document.querySelector('.heritage-ticker');
+const tickerToggle = document.querySelector('.ticker-toggle');
+tickerToggle.addEventListener('click', () => {
+  const paused = ticker.classList.toggle('is-paused');
+  tickerToggle.textContent = paused ? '▶' : 'Ⅱ';
+  tickerToggle.setAttribute('aria-label', paused ? 'Resume moving text' : 'Pause moving text');
+});
+// Progressive motion: content stays visible when observers are unavailable.
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+  const revealTargets = document.querySelectorAll('.photo-card,.welcome-copy,.section-intro,.history-heading,.history-image,.history-chapter,.wada-copy,.album-heading,.reservation-copy,#reservation-form,.visit-heading,.visit-links');
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {entry.target.classList.add('is-visible');observer.unobserve(entry.target);}
+  }), {threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  revealTargets.forEach(target => {target.classList.add('reveal');observer.observe(target);});
+  document.documentElement.classList.add('js-motion');
+}
+const progress = document.createElement('div');
+progress.className = 'scroll-progress';progress.setAttribute('aria-hidden','true');document.body.append(progress);
+let progressQueued = false;
+function updateProgress() {
+  const range = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.transform = `scaleX(${range > 0 ? Math.min(1,window.scrollY / range) : 0})`;
+  progressQueued = false;
+}
+window.addEventListener('scroll', () => {if(!progressQueued){progressQueued=true;window.requestAnimationFrame(updateProgress);}}, {passive:true});
+window.addEventListener('resize', updateProgress);
+updateProgress();
