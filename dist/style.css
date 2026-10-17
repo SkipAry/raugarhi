@@ -29,3 +29,8 @@ body:has(dialog[open]){overflow:hidden}dialog{border:0;padding:0;background:#241
 @media print{#menu-empty{display:none!important}}
 @media(min-width:741px) and (max-width:1000px){.nav-toggle{display:flex;align-items:center;gap:14px;border:0;background:none;color:var(--paper);padding:12px;}.site-header nav{display:none;position:absolute;left:0;right:0;top:105px;background:var(--paper);color:var(--maroon);padding:25px 6%;border-top:1px solid var(--line);flex-direction:column;align-items:stretch;gap:12px}.site-header nav.open{display:flex}.site-header nav>.button{background:var(--maroon);color:var(--paper);border-color:var(--maroon);max-width:300px;margin-top:10px}}
 .ticker-toggle{width:44px;height:44px}.lightbox-close,.lightbox-prev,.lightbox-next,.film-close{min-width:44px;min-height:44px}
+/* Menu marquee: identical sets make one seamless 20-second loop. */
+.heritage-ticker>.ticker-track{gap:0;animation-duration:20s}.heritage-ticker .ticker-set{display:flex;align-items:center;gap:42px;padding-right:42px;flex-shrink:0}.hero-shade{background:rgba(28,19,12,.10)}
+@media(max-width:740px){.heritage-ticker .ticker-set{gap:32px;padding-right:32px}}
+.hero h1,.hero-subtitle,.hero .eyebrow,.hero-bottom>p,.hero-menu,.full-film-button,.site-header nav>a:not(.button),.site-header .brand>span{text-shadow:0 2px 12px #0008}
+@media(max-width:1100px){.site-header nav.open>a:not(.button){text-shadow:none}}

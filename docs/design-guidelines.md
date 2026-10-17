@@ -44,3 +44,7 @@ Google Sans 400/500/600 now owns every text role, including headings, body, Mara
 ## Peshwai-inspired hero language
 
 Owner requested words evocative of the Peshwa era. Hero: थाट पेशवाईचा. मान पाहुण्यांचा. Supporting text uses खाशा पाहुण्यांसाठी, पंगत and शाही सरबराई. Booking action: पंगतीत आपलं स्थान राखा. This is creative hospitality language, without asserting that the new building belonged to the Peshwas. Google Sans and the readability system remain.
+
+## Menu ticker and brighter hero
+
+Moving strip now lists eight confirmed Marathi menu items in two identical groups for a seamless 20-second loop on desktop and mobile. Existing pause control and reduced-motion support remain. Hero video remains fully opaque; the dark overlay is now a uniform10% at the owner’s request to brighten the film.
