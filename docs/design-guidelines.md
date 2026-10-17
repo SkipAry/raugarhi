@@ -40,3 +40,7 @@ Body: 18px desktop, 17px mobile, 1.75–1.8 leading, prose max60ch. English head
 ## Owner-selected Google Sans
 
 Google Sans 400/500/600 now owns every text role, including headings, body, Marathi, menu names and controls. Official Google Fonts files are served locally as WOFF2. Font character maps verify Marathi and Latin coverage. The corrected sizes, line heights and spacing remain. Prior Lora/Mukta choices are superseded.
+
+## Peshwai-inspired hero language
+
+Owner requested words evocative of the Peshwa era. Hero: थाट पेशवाईचा. मान पाहुण्यांचा. Supporting text uses खाशा पाहुण्यांसाठी, पंगत and शाही सरबराई. Booking action: पंगतीत आपलं स्थान राखा. This is creative hospitality language, without asserting that the new building belonged to the Peshwas. Google Sans and the readability system remain.
