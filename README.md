@@ -1,6 +1,6 @@
 # Rau Garhi
 
-Marathi-led heritage restaurant website in `dist`, using the owner-selected Neyam maroon/parchment palette. Lora headings and Mukta English/Marathi text are served locally as WOFF2. Buildless HTML, CSS and JavaScript.
+Marathi-led heritage restaurant website in `dist`, using the owner-selected Neyam maroon/parchment palette. Google Sans is used throughout, including Marathi, and served locally as WOFF2 in weights 400, 500 and 600. Buildless HTML, CSS and JavaScript.
 
 ## Preview
 

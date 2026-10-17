@@ -36,3 +36,7 @@ Motion: staggered hero entrance, observer-based section/photo reveals, slow Mara
 The owner rejected the previous fonts and line spacing. The palette remains; typography changes to Lora 500/600 for English headings and Mukta 400/500/600 for English and Marathi reading/UI text. Locally served WOFF2 font files have verified Marathi and Latin glyph coverage. `dist/typography.css` is the sole screen type authority; 370 competing type declarations were removed from the layout stylesheet. No negative tracking on Devanagari.
 
 Body: 18px desktop, 17px mobile, 1.75–1.8 leading, prose max60ch. English headings: 1.18–1.2 leading. Marathi headings: 1.35–1.4. Menu names: 19–20px Mukta500, Marathi17px below; descriptions16px/1.75. Labels/notes13–16px. Shortened brand tagline avoids narrow-screen overflow. Print rules keep separate compact metrics.
+
+## Owner-selected Google Sans
+
+Google Sans 400/500/600 now owns every text role, including headings, body, Marathi, menu names and controls. Official Google Fonts files are served locally as WOFF2. Font character maps verify Marathi and Latin coverage. The corrected sizes, line heights and spacing remain. Prior Lora/Mukta choices are superseded.
