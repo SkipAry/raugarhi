@@ -56,3 +56,7 @@ Owner reported mismatched text placement across sections. Replaced the accumulat
 Eight-item Marathi menu ticker keeps its seamless20-second loop. Hero dark overlay stays at10%; video stays fully opaque. Browser page DOM was read successfully; screenshot and measurement commands still time out, so rendered alignment remains unverified. Source, structure and retained-content checks performed.
 
 Latest owner adjustment: hero dark overlay is30%, superseding the earlier10% setting. Video opacity remains100%.
+
+Owner removed the standalone section04, THE DETAILS WE COME BACK TO, because its architecture copy repeats the history and gallery. All10 gallery images remain. Reservation and location chapter numbers now04 and05. The earlier light-brown colour request remains paused; no footer recolouring applied.
+
+History now immediately follows the hero, before the menu ticker. Chapters run history 01, welcome 02, kitchen 03, reservations 04 and visit 05. Album tiles show photos without the bilingual text underneath; image alt text and full-size viewer labels remain.
