@@ -142,13 +142,6 @@ fullFilmDialog.addEventListener('close', () => {
   fullFilm.pause();
   if (heroWasPlaying && playbackWanted && !document.hidden) startFilm();
 });
-const ticker = document.querySelector('.heritage-ticker');
-const tickerToggle = document.querySelector('.ticker-toggle');
-tickerToggle.addEventListener('click', () => {
-  const paused = ticker.classList.toggle('is-paused');
-  tickerToggle.textContent = paused ? '▶' : 'Ⅱ';
-  tickerToggle.setAttribute('aria-label', paused ? 'Resume moving text' : 'Pause moving text');
-});
 // Progressive motion: content stays visible when observers are unavailable.
 if ('IntersectionObserver' in window && !reducedMotion.matches) {
   const revealTargets = document.querySelectorAll('.photo-card,.welcome-copy,.section-intro,.history-heading,.history-image,.history-chapter,.wada-copy,.album-heading,.reservation-copy,#reservation-form,.visit-heading,.visit-links');
