@@ -12,6 +12,21 @@ toggle.addEventListener('click', () => {
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
 }));
+
+// Escape closes the mobile navigation and restores its trigger focus.
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && nav.classList.contains('open')) {
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus();
+  }
+});
+// Keep the fixed enquiry link clear of the hero's film controls.
+const floatingContact = document.querySelector('.floating-contact');
+if ('IntersectionObserver' in window) {
+  floatingContact.hidden = true;
+  new IntersectionObserver(([entry]) => { floatingContact.hidden = entry.isIntersecting; }, {threshold:0})
+    .observe(document.querySelector('.hero'));
+}
+
 const form = document.querySelector('#reservation-form');
 const dateField = form.elements.date;
 const localDate = () => {
