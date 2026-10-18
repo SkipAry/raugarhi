@@ -70,3 +70,7 @@ Reference lock: retain the owner-selected Neyam-derived maroon/parchment palette
 Story arc: invitation → first taste (strip) → Maratha inspiration and founders → enter the gates → pangat/menu → wander the Gadhi → memories → reservation → road/map. All owner-selected Marathi lines and core facts stay; short section transitions replace isolated marketing statements. General Maratha-fort context is grounded in [UNESCO](https://whc.unesco.org/en/list/1739/); Rau Garhi remains explicitly a newly built, inspired Gadhi, with three years of work and the owner's July 2026 opening. No royal visits, battles or historic ownership are attributed to the restaurant.
 
 Hero: moved closing tagline inside `.hero-copy` in normal flow, 24px mobile/28px desktop from subtitle. Removed the old 760/780px floor and obsolete control-area padding; minimum remains 100svh for a full-screen film. Mobile section padding56px; history image400px maximum; sticky history photograph on desktop supports reading without scroll hijacking. Overlay remains30%; hero action buttons and controls stay removed.
+
+## Owner-selected mobile hero composition
+
+At740px and below the location/vegetarian eyebrow sits104px from the hero top, immediately below the88px navigation. The main headline, subtitle and closing line remain grouped and align toward the lower part of the full-screen hero, with at least56px/8svh bottom breathing room. Desktop composition is unchanged. Content-led minimum height prevents clipping on short or narrow screens.

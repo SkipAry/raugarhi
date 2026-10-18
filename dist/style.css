@@ -49,4 +49,9 @@ dialog{overscroll-behavior:contain}
 @media(min-width:901px){.history-image{position:sticky;top:32px}}
 @media(max-width:740px){.hero{min-height:100svh;padding:132px 0 64px}.hero-bottom{position:static;inset:auto;margin-top:24px}.hero-bottom>p{margin:0}.hero-subtitle{margin-bottom:0}.history-image img{max-height:400px}.section{padding-block:56px}}
 .button:disabled{opacity:.6;cursor:not-allowed}.button:disabled:hover{transform:none}
+/* Mobile hero: location just below the header, story copy lower in the frame. */
+@media(max-width:740px){
+ .hero{align-items:flex-end;padding:190px 0 max(56px,8svh)}
+ .hero-copy>.eyebrow{position:absolute;top:104px;left:var(--page-inset);right:var(--page-inset);margin:0}
+}
 @media print{@page{margin:15mm}body{background:white!important;color:#241b15!important}.skip,.site-header,footer,.hero,.heritage-ticker,.welcome,.history,.wada-section,.photo-album,.memory-banner,.reservation,.visit,.floating-contact,.scroll-progress,dialog,.section-intro,.menu-note,.menu-search-row,.menu-tabs,.print-menu,#menu-empty{display:none!important}.menu-section{display:block!important;padding:0!important;background:white!important}.menu-card{padding:20px 25px;outline:none;border:1px solid #71301f}.menu-card-header{padding-bottom:18px}.menu-script{display:block}.menu-panel,.menu-panel[hidden],.menu-subcategory,.menu-subcategory[hidden],.menu-dish,.menu-dish[hidden]{display:block!important}.menu-panel{padding:16px 0 0;break-inside:auto}.menu-subcategory+.menu-subcategory{margin-top:18px}.menu-subcategory h4{margin-top:12px;break-after:avoid}.dish-list{grid-template-columns:1fr 1fr;gap:0 25px}.menu-dish{padding:9px 0;break-inside:avoid}.menu-dish>p{margin-top:7px}.menu-card-footer{margin-top:20px;padding-top:12px}.js-motion .reveal{opacity:1;transform:none}}
