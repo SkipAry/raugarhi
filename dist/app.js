@@ -174,28 +174,7 @@ window.addEventListener('resize', updateProgress);
 updateProgress();
 
 // Reels use native scrolling and controls; only the chosen film loads and plays.
-const reelTrack = document.querySelector('.reel-track');
-const reelPrev = document.querySelector('.reel-prev');
-const reelNext = document.querySelector('.reel-next');
 const reelVideos = [...document.querySelectorAll('.reel-video')];
-function updateReelControls() {
-  const maxScroll = reelTrack.scrollWidth - reelTrack.clientWidth;
-  reelPrev.disabled = reelTrack.scrollLeft <= 1;
-  reelNext.disabled = reelTrack.scrollLeft >= maxScroll - 1;
-}
-function slideReels(direction) {
-  const step = reelTrack.querySelector('.reel-card').getBoundingClientRect().width + parseFloat(getComputedStyle(reelTrack).columnGap);
-  reelTrack.scrollBy({left:direction * step,behavior:reducedMotion.matches ? 'instant' : 'smooth'});
-}
-reelPrev.addEventListener('click', () => slideReels(-1));
-reelNext.addEventListener('click', () => slideReels(1));
-reelTrack.addEventListener('scroll', updateReelControls, {passive:true});
-reelTrack.addEventListener('keydown', event => {
-  if (event.target !== reelTrack || !['ArrowLeft','ArrowRight'].includes(event.key)) return;
-  event.preventDefault(); slideReels(event.key === 'ArrowRight' ? 1 : -1);
-});
-window.addEventListener('resize', updateReelControls);
-requestAnimationFrame(updateReelControls);
 reelVideos.forEach(video => video.addEventListener('play', () => {
   reelVideos.forEach(other => {if (other !== video) other.pause();});
 }));

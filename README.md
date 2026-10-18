@@ -36,4 +36,4 @@ The visit section embeds the exact Rau Garhi Google Maps listing from the owner-
 
 The visitor story flows from Maratha heritage and the founders’ dream through the gates, to the pangat, a walk around the Gadhi, shared memories and a visit. The hero tagline follows its subtitle in normal document flow to avoid a viewport-sized internal gap.
 
-Three owner-supplied portrait reels appear directly after the menu in a swipeable slider. Optimized H.264/AAC videos and WebP preview frames are in `dist/assets/reels`; full source recordings remain local in the ignored `reels` directory. Native controls, arrow/keyboard navigation, on-demand playback and pause-when-away behavior support mobile use.
+Three owner-supplied portrait reels appear directly after the menu in a swipeable slider. Optimized H.264/AAC videos and WebP preview frames are in `dist/assets/reels`; full source recordings remain local in the ignored `reels` directory. Desktop shows all three side by side; mobile swipes between them. Native controls, on-demand playback and pause-when-away behavior support mobile use.

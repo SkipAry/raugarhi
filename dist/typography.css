@@ -22,5 +22,5 @@ h2{font-size:clamp(2.125rem,3.4vw,3.5rem);line-height:1.18}h3{font-size:1.75rem;
 @media screen{.history-source{font:500 .9375rem/1.6 var(--sans)}.history-heading h2[lang="mr"]{line-height:1.35}}
 @media screen and (max-width:740px){.history-heading h2[lang="mr"]{line-height:1.4}}
 
-@media screen{.reel-controls{font:400 .9375rem/1.6 var(--sans)}.reel-navigation button{font:400 1.5rem/1 var(--sans)}.reels-section h2[lang="mr"]{line-height:1.4}.reel-navigation>span{white-space:nowrap}}
-@media screen and (max-width:375px){.reel-controls{font-size:.8125rem}}
+@media screen{.reel-hint{font:400 .9375rem/1.6 var(--sans)}.reels-section h2[lang="mr"]{line-height:1.4}}
+@media screen and (max-width:375px){.reel-hint{font-size:.8125rem}}
