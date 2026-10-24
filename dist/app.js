@@ -19,12 +19,18 @@ document.addEventListener('keydown', event => {
     nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus();
   }
 });
-// Keep the hero uncluttered; show the fixed enquiry link below it.
+// Keep the hero and footer uncluttered (the footer has Back to top and its own call to action);
+// show the fixed enquiry link only between them.
 const floatingContact = document.querySelector('.floating-contact');
 if ('IntersectionObserver' in window) {
   floatingContact.hidden = true;
-  new IntersectionObserver(([entry]) => { floatingContact.hidden = entry.isIntersecting; }, {threshold:0})
-    .observe(document.querySelector('.hero'));
+  const coveringSections = new Set();
+  const contactObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.isIntersecting ? coveringSections.add(entry.target) : coveringSections.delete(entry.target));
+    floatingContact.hidden = coveringSections.size > 0;
+  }, {threshold:0});
+  contactObserver.observe(document.querySelector('.hero'));
+  contactObserver.observe(document.querySelector('footer'));
 }
 
 const form = document.querySelector('#reservation-form');
