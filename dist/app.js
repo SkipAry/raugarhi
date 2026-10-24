@@ -73,13 +73,18 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 async function startFilm() {
   try { await video.play(); } catch { /* Keep the poster visible when autoplay is unavailable. */ }
 }
+// Data-saver and 2G visitors keep the poster; the film never downloads for them.
+const saveData = Boolean(navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType)));
+const filmAllowed = () => !reducedMotion.matches && !saveData;
 reducedMotion.addEventListener('change', event => {
-  if (event.matches) video.pause(); else if (!document.hidden) startFilm();
+  if (event.matches) video.pause(); else if (!document.hidden && filmAllowed()) startFilm();
 });
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) video.pause(); else if (!reducedMotion.matches) startFilm();
+  if (document.hidden) video.pause(); else if (filmAllowed()) startFilm();
 });
-if (!reducedMotion.matches) { video.muted = true; startFilm(); }
+// Start the film once the page has loaded, so text, fonts and images get the connection first.
+function startFilmWhenLoaded() { if (filmAllowed()) { video.muted = true; startFilm(); } }
+if (document.readyState === 'complete') startFilmWhenLoaded(); else window.addEventListener('load', startFilmWhenLoaded, {once:true});
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 const menuTabs = [...document.querySelectorAll('[role="tab"]')];
