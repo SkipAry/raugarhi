@@ -19,18 +19,12 @@ document.addEventListener('keydown', event => {
     nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus();
   }
 });
-// Keep the hero and footer uncluttered (both carry their own calls to action);
-// show the fixed enquiry link only between them.
+// Keep the hero uncluttered; show the fixed enquiry link below it.
 const floatingContact = document.querySelector('.floating-contact');
 if ('IntersectionObserver' in window) {
   floatingContact.hidden = true;
-  const coveringSections = new Set();
-  const contactObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => entry.isIntersecting ? coveringSections.add(entry.target) : coveringSections.delete(entry.target));
-    floatingContact.hidden = coveringSections.size > 0;
-  }, {threshold:0});
-  contactObserver.observe(document.querySelector('.hero'));
-  contactObserver.observe(document.querySelector('footer'));
+  new IntersectionObserver(([entry]) => { floatingContact.hidden = entry.isIntersecting; }, {threshold:0})
+    .observe(document.querySelector('.hero'));
 }
 
 const form = document.querySelector('#reservation-form');
@@ -160,7 +154,7 @@ photoDialog.addEventListener('keydown', event => {
 photoDialog.addEventListener('click', event => {if(event.target === photoDialog) {const rect=photoDialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)photoDialog.close();}});
 // Progressive motion: content stays visible when observers are unavailable.
 if ('IntersectionObserver' in window && !reducedMotion.matches) {
-  const revealTargets = document.querySelectorAll('.photo-card,.welcome-copy,.section-intro,.history-heading,.history-image,.history-chapter,.wada-copy,.album-heading,.reservation-copy,#reservation-form,.visit-heading,.visit-links,.section-figure');
+  const revealTargets = document.querySelectorAll('.photo-card,.welcome-copy,.section-intro,.history-heading,.history-image,.history-chapter,.wada-copy,.album-heading,.reservation-copy,#reservation-form,.visit-heading,.visit-links');
   const observer = new IntersectionObserver(entries => entries.forEach(entry => {
     if (entry.isIntersecting) {entry.target.classList.add('is-visible');observer.unobserve(entry.target);}
   }), {threshold:0.08,rootMargin:'0px 0px -30px 0px'});
